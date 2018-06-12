@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "sourceMap": true
-    },
-    "files": [
-        "ts-src/app.ts"
-    ]
+    }
+    // "files": [
+    //     "ts-src/app.ts"
+    // ]
 }

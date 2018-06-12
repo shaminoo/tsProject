@@ -1,24 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-    devtool: 'source-map',
-  entry: ['./ts-src/app.ts'],
+  devtool: 'source-map',
+  entry: ['./app1.js'],
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
-        include: path.resolve(__dirname, "ts-src"),
-        exclude: /node_modules/
+        use: 'ts-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['.webpack.js', '.web.js', '.tsx', '.ts', '.js' ]
+    extensions: ['.ts' ]
   },
+  externals: {'angular': 'angular'},
   output: {
-    filename: 'app.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'app1.js',
+    path: path.resolve(__dirname, "dist")
   },
   watch: true
 };
